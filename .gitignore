@@ -1,0 +1,10 @@
+debug
+target
+.*
+!.gitignore
+__pycache__/
+training/runs/
+training/*.dll
+training/*.so
+training/*.lib
+training/*.exp

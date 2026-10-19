@@ -1,0 +1,18 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+# o crate web só compila para wasm (page/build.sh)
+default-members = ["crates/core", "crates/nnue", "crates/search", "crates/uci"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+
+# nenhum crate do projeto usa unsafe
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"

@@ -1,0 +1,16 @@
+[package]
+name = "olidra-web"
+version.workspace = true
+edition.workspace = true
+
+# motor compilado para WebAssembly, usado pela página (page/)
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+olidra-core = { path = "../core" }
+olidra-nnue = { path = "../nnue" }
+olidra-search = { path = "../search" }
+wasm-bindgen = "0.2.129"
+
+# o código gerado pelo wasm-bindgen usa unsafe, então este crate não herda o forbid(unsafe_code) do workspace

@@ -1,0 +1,10 @@
+[package]
+name = "olidra-core"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+cozy-chess = "=0.3.4"
+
+[lints]
+workspace = true

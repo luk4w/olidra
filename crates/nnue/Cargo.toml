@@ -1,0 +1,10 @@
+[package]
+name = "olidra-nnue"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+olidra-core = { path = "../core" }
+
+[lints]
+workspace = true

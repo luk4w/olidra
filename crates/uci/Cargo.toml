@@ -1,0 +1,16 @@
+[package]
+name = "olidra-uci"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "olidra"
+path = "src/main.rs"
+
+[dependencies]
+olidra-core = { path = "../core" }
+olidra-nnue = { path = "../nnue" }
+olidra-search = { path = "../search" }
+
+[lints]
+workspace = true

@@ -1,0 +1,13 @@
+[package]
+name = "olidra-search"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+olidra-core = { path = "../core" }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+web-time = "1.1.0"
+
+[lints]
+workspace = true
